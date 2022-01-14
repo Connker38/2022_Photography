@@ -280,3 +280,8 @@ body {font-family: Verdana, sans-serif;}
   margin-top: 9px;
   vertical-align: middle;
 }
+
+.gallaryH1 {
+  display: flex;
+  justify-content: center; 
+}
