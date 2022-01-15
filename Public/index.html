@@ -8,19 +8,25 @@
       <title>Conner Atherton Photography</title>
   </head>
   <body>
-    <div class="darkMode">
-      <button onclick="darkModeFunk(), swapImage()">Dark Mode Button</button>
-    </div>
-    <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; </span>
     <nav>
+      <div class="darkMode">
+        <label class="dmSwitch">
+          <input type="checkbox">
+          <span class="slider round"onclick="darkModeFunk(), swapImage()"></span>
+        </label>
+      
+      </div>
+      
+      <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; </span>
+         
         <div id=mySidenav class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
             <a href="#">About</a>
             <a href="gallary.html">Gallery</a>
             <a href="#">Projects</a>
             <a href="#">Contact</a>
         </div>
-        
     </nav>
 
     <div class="title">

@@ -61,13 +61,12 @@ function three() {
 
 function darkModeFunk() {
   var element = document.body;
-  
   element.classList.toggle("darkMode");
+
 }
 
 function swapImage() {
   if (document.getElementById("light-theme").src.endsWith("Images/CA3.png") == true)//Comparison
-
 
   {
     document.getElementById("light-theme").src = "Images/CAinverrt.png";//assignment  
@@ -77,3 +76,4 @@ function swapImage() {
     document.getElementById("light-theme").src = "Images/CA3.png";
   }
 }
+

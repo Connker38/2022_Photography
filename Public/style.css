@@ -16,18 +16,74 @@ body {
 span {
     position: absolute;
     right: 6%;
-    
 }
 
 .darkMode {
-  background-color: black;
-  color: white;
+  background-color: #121212;
+  color: rgb(255, 255, 255);
 }
 
-.darkMode button {
+
+.dmSwitch {
   position: absolute;
-  right: 13%;
-  
+  display: inline-block;
+  right: 0;
+  margin-top: 1%;
+  margin-right: 13%;
+  width: 50px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #121212;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #c48818;
+}
+
+input:focus + .slider{
+  box-shadow: 0 0 1px #c48818;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 30px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 .sidenav {
@@ -164,16 +220,15 @@ body {font-family: Verdana, sans-serif;}
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }
+   }
   
-  /*Images with text*/
+   /*Images with text*/
     .row {
       margin-top: 80%;
-      border: 2px solid black;
+
     }
 
     .column {
-      border: 1px solid red;
       display: flex;
       flex-direction: column; 
 
@@ -195,15 +250,26 @@ body {font-family: Verdana, sans-serif;}
       width: 100%;
     }
     
-
+     
       /* Responsive layout - makes a two column-layout instead of four columns */
     @media screen and (min-width: 800px) {      
+      .sidenav {
+        overflow: hidden;
+        background-color: #333;
+      }    
+      
       .logo {
         display: flex;
         flex-wrap: wrap;
         width: 80px;
         height: auto;
       }
+
+      .dmSwitch, .slider.round {
+        top: 0;
+        right: 0;
+      }
+
       .column {
         display: flex;
         flex-direction: row;
@@ -230,6 +296,7 @@ body {font-family: Verdana, sans-serif;}
         flex: 33%;
         max-width: 33%;
       }
+      
     }
 
 
