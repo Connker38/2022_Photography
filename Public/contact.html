@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+      <title>Conner Atherton Photography</title>
+  </head>
+  <body>
+    <nav>
+      <div class="dark">
+        <label class="dmSwitch">
+          <input type="checkbox">
+          <span class="slider" id="mode" onclick="darkModeFunk(), swapImage()" aria-label="toggle dark mode"></span>
+        </label>
+      
+      </div>
+      
+      <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; </span>
+         
+        <div id=mySidenav class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="gallary.html">Gallery</a>
+            <a href="#">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="title">
+      <div class="logo">
+        <img src="Images\CA3.png" id="light-theme" style="width: 100%;">
+      </div>
+    </div>
+
+    <div class="form-cont">
+      <form class="contact-form" action="contactform.php" method="post">
+        <label for="aname">Name</label>
+        <input type="text" id="aname" name="name" placeholder="Your name...">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email...">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your message..." style="height: 250px"></textarea>
+        
+        <input id="submit" type="submit" value="Submit" onclick="showError()">    
+      </form>
+    </div>
+
+
+    <div class="footer">
+      <div class="top-secton">
+        <img src="Images/instagram-svgrepo-com.svg" href="https://www.instagram.com/conaphotography/">
+      </div>
+    </div>
+
+
+    <script src="app.js"></script>
+    
+
+  </body>
+</html>

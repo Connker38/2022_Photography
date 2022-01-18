@@ -29,7 +29,7 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
+  setTimeout(showSlides, 5000);
 }
 
 /* Gets the elements with class="gallaryColumn" 
@@ -61,8 +61,7 @@ function three() {
 
 function darkModeFunk() {
   var element = document.body;
-  element.classList.toggle("darkMode");
-
+  element.classList.toggle("dark");
 }
 
 function swapImage() {
@@ -77,3 +76,38 @@ function swapImage() {
   }
 }
 
+//Need to sort out sessionStorage this one sort of works but becomes troublesome when refreshing page as it won't remmeber log invert or the switch 
+
+let darkMode = sessionStorage.getItem("darkMode");
+const darkModeToggle = document.querySelector(".slider", ".title");
+
+const enableDarkMode = () => {
+  document.body.classList.add("dark",);
+  sessionStorage.setItem("darkMode", "enabled");
+};
+
+const disableDarkMode = () => {
+  document.body.classList.remove("dark");
+  sessionStorage.setItem("darkMode", "null");
+};
+
+if (darkMode === "enabled") {
+  enableDarkMode();  
+};
+
+darkModeToggle.addEventListener("click", () => {
+  darkMode = sessionStorage.getItem("darkMode");
+  if (darkMode !== "enabled") {
+    enableDarkMode();
+    console.log(darkMode);
+  } else {
+    disableDarkMode();
+    console.log(darkMode);
+  }
+});
+
+function showError() {
+  alert("Sorry, this is currently not working. Please get in touch via Instagram for the time being.");
+  location.reload();
+  return false;
+}
