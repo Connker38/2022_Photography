@@ -11,6 +11,15 @@ function closeNav() {
 }
 
 
+function navBarFunct() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "sidenav") {
+    x.className += " responsive";
+  } else {
+    x.className = "sidenav";
+  }
+}
+
 
 var slideIndex = 0;
 showSlides();
@@ -32,32 +41,6 @@ function showSlides() {
   setTimeout(showSlides, 5000);
 }
 
-/* Gets the elements with class="gallaryColumn" 
-var elements = document.getElementsByClassName("gallaryColumn");
-
-// Decalre "loop" variable
-var i;
-
-// Full width images
-function one() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.flex = "100%";
-  }
-}
-
-// Two images side by side
-function two() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.flex = "50%";
-  }
-}
-
-// Four images side by side
-function three() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.flex = "33%";
-  }
-}*/
 
 function darkModeFunk() {
   var element = document.body;

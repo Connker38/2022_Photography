@@ -135,8 +135,7 @@ body {font-family: Verdana, sans-serif;}
 }
 
 .mySlides img{
-  height: fit-content;
-  width: fit-content;
+  width: 100%;
 }
 /*
 @media screen and (min-height: 600px;) {
@@ -156,6 +155,7 @@ body {font-family: Verdana, sans-serif;}
   left: 0%;
   right: 0;
   z-index: -1;
+  width: 100%;
 }
 
 
@@ -255,7 +255,8 @@ body {font-family: Verdana, sans-serif;}
     
      
       /* Responsive layout - makes a two column-layout instead of four columns */
-    @media screen and (min-width: 800px) {      
+    @media screen and (min-width: 800px) {
+
       .sidenav {
         overflow: hidden;
       }    
@@ -299,7 +300,21 @@ body {font-family: Verdana, sans-serif;}
         flex: 33%;
         max-width: 33%;
       }
-      
+
+      .slideshow-container {
+        
+        
+      }
+      .mySlides {
+        display: block;
+        margin: 0 auto;
+        width: 1280px;
+        height: 720px;
+      }
+
+      .dotts {
+        padding-top: 100px;
+      }       
     }
 
 
