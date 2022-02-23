@@ -1,22 +1,22 @@
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("topnav").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("topnav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
   document.body.style.backgroundColor = "white";
 }
 
 
 function navBarFunct() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "sidenav") {
+  var x = document.getElementById("Mytopnav");
+  if (x.className === "Mysidenav") {
     x.className += " responsive";
   } else {
-    x.className = "sidenav";
+    x.className = "Mysidenav";
   }
 }
 
