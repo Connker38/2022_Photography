@@ -8,16 +8,32 @@
       <title>Conner Atherton Photography</title>
   </head>
   <body>
-    <nav> 
+    <div id="whole-nav">
+
+      <div id="myTopnav" class="Mysidenav">
+        <a href="index.html">Home</a>
+        <a href="#">About</a> 
+        <a href="gallary.html">Gallery</a>
+        <a href="#">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="title">
+        <div class="logo" id="logoId">
+          <a id="logo-home" href="index.html">
+            <img src="Images\CA3.png" id="light-theme" style="width: 100%;">
+          </a>
+        </div>
+
       <div class="dark">
         <label class="dmSwitch">
           <input type="checkbox">
-          <span class="slider" id="mode" onclick="darkModeFunk(), swapImage()" aria-label="toggle dark mode"></span>
+          <span class="slider round"onclick="darkModeFunk(), swapImage()" aria-label="toggle dark mode"></span>
         </label>
-      
       </div>
-      
-      <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; </span>
+    </div>
+    <nav>
+      <span style="font-size:30px;cursor:pointer;" onclick="openNav()" id="side-menu">&#9776; </span>
          
         <div id=mySidenav class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -27,31 +43,26 @@
             <a href="#">Projects</a>
             <a href="contact.html">Contact</a>
         </div>
-    </nav>
 
-    <div class="title">
-      <div class="logo">
-        <a id="logo-home" href="index.html">
-          <img src="Images\CA3.png" id="light-theme" style="width: 100%;">
-        </a>
+      </div>
+    </nav>
+    
+    <div class="whole-form">
+      <div class="form-cont">
+        <form class="contact-form" action="contactform.php" method="post">
+          <label for="aname">Name</label>
+          <input type="text" id="aname" name="name" placeholder="Your name...">
+
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Your email...">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message..." style="height: 250px"></textarea>
+          
+          <input id="submit" type="submit" value="Submit" onclick="showError()">    
+        </form>
       </div>
     </div>
-
-    <div class="form-cont">
-      <form class="contact-form" action="contactform.php" method="post">
-        <label for="aname">Name</label>
-        <input type="text" id="aname" name="name" placeholder="Your name...">
-
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="Your email...">
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Your message..." style="height: 250px"></textarea>
-        
-        <input id="submit" type="submit" value="Submit" onclick="showError()">    
-      </form>
-    </div>
-
 
     <div class="footer">
       <div class="top-secton">

@@ -8,18 +8,34 @@
       <title>Conner Atherton Photography</title>
   </head>
   <body>
-    <nav>
+    <div id="whole-nav">
+
+      <div id="myTopnav" class="Mysidenav">
+        <a href="index.html">Home</a>
+        <a href="#">About</a> 
+        <a href="gallary.html">Gallery</a>
+        <a href="#">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="title">
+        <div class="logo" id="logoId">
+          <a id="logo-home" href="index.html">
+            <img src="Images\CA3.png" id="light-theme" style="width: 100%;">
+          </a>
+        </div>
+
       <div class="dark">
         <label class="dmSwitch">
           <input type="checkbox">
-          <span class="slider" onclick="darkModeFunk(), swapImage()" aria-label="toggle dark mode"></span>
+          <span class="slider round"onclick="darkModeFunk(), swapImage()" aria-label="toggle dark mode"></span>
         </label>
-      
       </div>
-      
-      <span id="open-menu"style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; </span>
+    </div>
+    <nav>
+      <span style="font-size:30px;cursor:pointer;" onclick="openNav()" id="side-menu">&#9776; </span>
          
-        <div class="sidenav" id=topnav>
+        <div id=mySidenav class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="index.html">Home</a>
             <a href="#">About</a>
@@ -28,23 +44,8 @@
             <a href="contact.html">Contact</a>
         </div>
 
-        <div class="Mysidenav" id=Mytopnav>
-          <a href="index.html">Home</a>
-          <a href="#">About</a>
-          <a href="gallary.html">Gallery</a>
-          <a href="#">Projects</a>
-          <a href="contact.html">Contact</a>
-      </div>
-
+        </div>
     </nav>
-
-    <div class="title">
-      <div class="logo">
-        <a id="logo-home" href="index.html">
-        <img src="Images\CA3.png" id="light-theme" style="width: 100%;">
-        </a>
-      </div>
-    </div>
 
     <div class="slideshow-container">
     
