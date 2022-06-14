@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@chec/commerce.js": "^2.8.0",
     "jquery": "^3.6.0"
   }
 }
