@@ -57,6 +57,7 @@ function showSlides() {
 function darkModeFunk() {
   var element = document.body;
   element.classList.toggle("dark");
+  
 }
 
 function swapImage() {
