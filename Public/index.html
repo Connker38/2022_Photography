@@ -24,6 +24,7 @@
             <img src="Images\CA3.png" id="light-theme" style="width: 100%;">
           </a>
         </div>
+      </div>
 
       <div class="dark">
         <label class="dmSwitch">
@@ -33,19 +34,39 @@
       </div>
     </div>
     <nav>
-      <span style="font-size:30px;cursor:pointer;" onclick="openNav()" id="side-menu">&#9776; </span>
-         
-        <div id=mySidenav class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.html">Home</a>
-            <a href="#">About</a>
-            <a href="gallary.html">Gallery</a>
-            <a href="#">Projects</a>
-            <a href="contact.html">Contact</a>
-        </div>
 
-        </div>
     </nav>
+
+
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="navigation__button">
+          <span class="navigation__icon" aria-label="toggle navigation menu"></span>
+        </label>
+        <div class="navigation__background"></div>
+
+        <nav class="navigation__nav" role="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="index.html" class="navigation__link"><span></span>Home</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link"><span></span>About</a>
+            </li>
+            <li class="navigation__item">
+              <a href="gallary.html" class="navigation__link"><span></span>Gallary</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link"><span></span>Projects</a>
+            </li>
+            <li class="navigation__item">
+              <a href="contact.html" class="navigation__link"><span></span>Contact</a>
+            </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+    
 
     <div class="slideshow-container">
     
