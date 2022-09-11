@@ -466,7 +466,7 @@ body {font-family: Verdana, sans-serif;}
       width: 100%;
       height: fit-content;
     }
-    
+
      
       /* Responsive layout - makes a two column-layout instead of four columns */
     @media screen and (min-width: 800px) {
@@ -768,12 +768,4 @@ input[type=submit]:hover {
 
 .dark form ::placeholder {
   color: #C9C9C9;
-}
-
-.light-theme-logo {
-  display: block;
-}
-
-.dark-theme-logo {
-  display: contents;
 }

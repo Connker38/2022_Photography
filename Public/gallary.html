@@ -9,7 +9,6 @@
   </head> 
   <body>
     <div id="whole-nav">
-
       <div id="myTopnav" class="Mysidenav">
         <a href="index.html">Home</a>
         <a href="#">About</a> 
@@ -21,18 +20,20 @@
       <div class="title">
         <div class="logo" id="logoId">
           <a id="logo-home" href="index.html">
-            <img src="Images\CA3.png" id="light-theme" style="width: 100%;">
+            <img src="/Public/Images/CA3.png" id="light-theme" style="width: 100%;">
           </a>
         </div>
+      </div>
 
       <!--div class="dark">
         <label class="dmSwitch">
           <input type="checkbox">
-          <span class="slider round"onclick="darkModeFunk(), swapImage()" aria-label="toggle dark mode"></span>
+          <span class="slider round" id="theme-switcher" onclick="darkModeFunk(), swapImage()" aria-label="toggle dark mode"></span>
         </label>
-      </div-->
       </div>
+      </div!-->
     </div>
+  </div>
     <nav>
 
         <div class="navigation">
@@ -60,6 +61,12 @@
                 <a href="contact.html" class="navigation__link"><span></span>Contact</a>
               </li>
             </ul>
+          </div>
+        </div>
+
+        <div id="theme-container">
+          <div id="theme-switcher">
+            <input type="button">
           </div>
         </div>
     </nav>
@@ -107,6 +114,7 @@
     </div>
 
 
+    <script src="dark.js"></script>
     <script src="app.js"></script>
     
 
