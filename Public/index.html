@@ -25,97 +25,66 @@
         </div>
       </div>
 
-      <!--div class="dark">
-        <label class="dmSwitch">
-          <input type="checkbox">
-          <span class="slider round" id="theme-switcher" onclick="darkModeFunk(), swapImage()" aria-label="toggle dark mode"></span>
-        </label>
+      <div id="theme-container">
+        <div id="theme-switcher">
+          <input type="button">
+        </div>
       </div>
-      </div!-->
     </div>
-  </div>
     <nav>
+      <div class="navigation">
+          <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+          <label for="nav-toggle" class="navigation__button">
+            <span class="navigation__icon" aria-label="toggle navigation menu"></span>
+          </label>
+          <div class="navigation__background"></div>
 
+          <nav class="navigation__nav" role="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="index.html" class="navigation__link"><span></span>Home</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link"><span></span>About</a>
+              </li>
+              <li class="navigation__item">
+                <a href="gallary.html" class="navigation__link"><span></span>Gallary</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link"><span></span>Projects</a>
+              </li>
+              <li class="navigation__item">
+                <a href="contact.html" class="navigation__link"><span></span>Contact</a>
+              </li>
+          </ul>
+      </div>
     </nav>
-
-
-    <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
-        <label for="nav-toggle" class="navigation__button">
-          <span class="navigation__icon" aria-label="toggle navigation menu"></span>
-        </label>
-        <div class="navigation__background"></div>
-
-        <nav class="navigation__nav" role="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="index.html" class="navigation__link"><span></span>Home</a>
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link"><span></span>About</a>
-            </li>
-            <li class="navigation__item">
-              <a href="gallary.html" class="navigation__link"><span></span>Gallary</a>
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link"><span></span>Projects</a>
-            </li>
-            <li class="navigation__item">
-              <a href="contact.html" class="navigation__link"><span></span>Contact</a>
-            </li>
-      </ul>
+    
+     
+    <div class="splash-sky">
+      <img src="Images/New_website_photos/Sky-Lake-District.webp" alt="Sky Image" id="sky">
+      <img src="Images/Wasdale-Head-In-The-Lake-District.webp" alt="Wasdale Head In The Lake District" id="wasdale">
+      <img src="Images/New_website_photos/Great-Gable-In-Wasdale-The-Lake-District.webp" alt="Great Gable Wast Water The Lake District Cumbria" id="great-gable">
+      <img src="Images/New_website_photos/Scafell-Pike-In-Wasdale-The-Lake-District-All-Extras.webp" alt="Skarfell Pike Wast Water The Lake District Cumbria" id="scafell">
+      <img src="Images/New_website_photos/Water-Lake-District.webp" id="water">
     </div>
 
-    <div id="theme-container">
-      <div id="theme-switcher">
-        <input type="button">
-      </div>
-    </div>
-  </nav>
-</div>
-    
-
-    <div class="slideshow-container">
-    
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 4</div>
-        <img src="Images/Bedruthan-Steps-In-Cornwall.png">
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 4</div>
-        <img src="Images/Dawlish-Warren-In-Devon.png">
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 4</div>
-        <img src="Images/Kennal-Vale-In-Cornwall.png">
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">4 / 4</div>
-        <img src="Images/Farmer-In-Devon.png">
-      </div>
-      <br>
-
-      <div class="dotts"style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-      </div>
+    <div class="mobile-splash">
+      <img src="Images/New_website_photos/Kennal-Vale-MbGround.webp" alt="" id="Kennal1">
+      <img src="Images/New_website_photos/Kennal-Vale-MbGround2.webp" alt="" id="Kennal2">
+      <img src="Images/New_website_photos/Kennal-Vale-MbGround3.webp" alt="" id="Kennal3">
     </div>
 
     <div class="row">
       <div class="column">
 
         <div class="left-image">
-          <img src="Images/Farmer-In-Devon.png" alt="">
+          <img id="lefty" src="Images/Farmer-In-Devon.png" alt="">
           <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </div>
 
         <div class="right-image">
-          <img src="Images/Kennal-Vale-In-Cornwall.png" alt="">
+          <img id="righty" src="Images/Kennal-Vale-In-Cornwall.png" alt="">
           <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </div>
       </div>
@@ -127,9 +96,82 @@
           <img src="Images/instagram-svgrepo-com.svg" href="https://www.instagram.com/conaphotography/">
         </div>
       </div>
-    
-    <script src="dark.js"></script>
+
+      <script src="dark.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.to("#sky", {
+        scrollTrigger : {
+          scrub : 1
+        },
+        scale : 1.5
+      });
+
+      gsap.to("#wasdale", {
+        scrollTrigger : {
+          scrub : 1
+        },
+        scale : 1.5,
+        x : 400,
+        
+      });
+
+      gsap.to("#great-gable", {
+        scrollTrigger : {
+          scrub : 1
+        },
+        scale : 1.5,
+      });
+
+      gsap.to("#scafell", {
+        scrollTrigger : {
+          scrub : 1
+        },
+        scale : 1.5,
+        x : -400,
+      });
+
+      gsap.to("#water", {
+        scrollTrigger : {
+          scrub : 1
+        },
+        y : -800,
+      });
+
+      gsap.to("#lefty", {
+        scrollTrigger : {
+          scrub : 1
+        },
+        
+      });
+
+      gsap.to("#Kennal1", {
+        scrollTrigger : {
+          scrub : 1
+        },
+        scale : 1.5,
+      });
+
+      gsap.to("#Kennal2", {
+        scrollTrigger : {
+          scrub : 1
+        },
+        scale : 2.5,
+        
+      });
+
+      gsap.to("#Kennal3", {
+        scrollTrigger : {
+          scrub : 1
+        },
+        scale : 1.5,
+        y : -100,
+        
+      });
+    </script>
     <script src="app.js"></script>
     
   </body>
 </html>
+
