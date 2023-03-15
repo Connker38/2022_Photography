@@ -10,9 +10,9 @@
   <body>
     <div id="whole-nav">
       <div id="myTopnav" class="Mysidenav">
-        <a href="index.html">Home</a>
+        <a  href="index.html">Home</a>
         <a href="#">About</a> 
-        <a href="gallary.html">Gallery</a>
+        <a class="active" href="gallary.html">Gallery</a>
         <a href="#">Projects</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -30,9 +30,8 @@
           <input type="button">
         </div>
     </div>
-  </div>
+    </div>
     <nav>
-
         <div class="navigation">
           <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
           <label for="nav-toggle" class="navigation__button">
@@ -62,40 +61,49 @@
         </div>
     </nav>
 
-    
-
     <div class="gallaryH1">
       <h1>Gallary</h1>
     </div>
 
-    <div class="gallaryRow">
-      <div class="gallaryColumn">
-        <img src="Images/New_website_photos/Gallery/Farmers_Field.png">
-        <img src="Images/New_website_photos/Gallery/Argile1.png">
-        <img src="Images/New_website_photos/Gallery/Man_And_His_Dog.png">
-        <img src="Images/New_website_photos/Gallery/Squirral_Eating.jpg">
-        <img src="Images/New_website_photos/Gallery/Kennal_Vale_In_Cornwall.png">
-        <img src="Images/New_website_photos/Gallery/Pen_Y_Fan_In_Welsh_Vally.png">
+    <div class="sorting">
+      <div class="sort-buttons">
+        <p style="font-size:10px;">Sort</p>
+        <button class="all" data-btn="1">All</button>
+        <button class="city" data-btn="2">City</button>
+        <button class="landscape" data-btn="3">Landscape</button>
+        <button class="Wildlife" data-btn="4">Wildlife</button>
+        
+      </div>  
+    </div>
+    <div class="images">
+      <div class="gallaryRow">
+        <div class="gallaryColumn">
+          <img src="Images/New_website_photos/Gallery/Farmers_Field.png" data-img="3">
+          <img src="Images/New_website_photos/Gallery/Argile1.png"data-img="3">
+          <img src="Images/New_website_photos/Gallery/Man_And_His_Dog.png"data-img="4">
+          <img src="Images/New_website_photos/Gallery/Squirral_Eating.jpg"data-img="4">
+          <img src="Images/New_website_photos/Gallery/Kennal_Vale_In_Cornwall.png"data-img="3">
+          <img src="Images/New_website_photos/Gallery/Pen_Y_Fan_In_Welsh_Vally.png"data-img="3">
 
-      </div>
-      <div class="gallaryColumn">
-        <img src="Images/New_website_photos/Gallery/Dawlish_Red_Stone.png">
-        <img src="Images/New_website_photos/Gallery/Dog_Running.png">
-        <img src="Images/New_website_photos/Gallery/Lost_garden_Path.png">
-        <img src="Images/New_website_photos/Gallery/Bedruthen_Blow_Hole.png">
-        <img src="Images/New_website_photos/Gallery/Lost_Garden_of_Heligan.png">
+        </div>
+        <div class="gallaryColumn">
+          <img src="Images/New_website_photos/Gallery/Dawlish_Red_Stone.png" data-img="3">
+          <img src="Images/New_website_photos/Gallery/Dog_Running.png"data-img="4">
+          <img src="Images/New_website_photos/Gallery/Lost_garden_Path.png" data-img="3">
+          <img src="Images/New_website_photos/Gallery/Bedruthen_Blow_Hole.png" data-img="3">
+          <img src="Images/New_website_photos/Gallery/Lost_Garden_of_Heligan.png" data-img="3">
 
-      </div>
-      <div class="gallaryColumn">
-        <img src="Images/New_website_photos/Gallery/Sprocker_Spanial_In_Devon.png">
-        <img src="Images/New_website_photos/Gallery/Rainbow_In_Cornwall.png">
-        <img src="Images/New_website_photos/Gallery/Haldon_Belvedere_Lawrence_Castel_In_Devon.png">
-        <img src="Images/New_website_photos/Gallery/Autumn_Long_Exposure.png">
-        <img src="Images/New_website_photos/Gallery/Bedruthan_Steps_In_Cornwall.png">
-        <img src="Images/New_website_photos/Gallery/Hill_In_Wales.png">
-      </div>
-
-    </div> 
+        </div>
+        <div class="gallaryColumn">
+          <img src="Images/New_website_photos/Gallery/Sprocker_Spanial_In_Devon.png" data-img="4">
+          <img src="Images/New_website_photos/Gallery/Rainbow_In_Cornwall.png" data-img="3">
+          <img src="Images/New_website_photos/Gallery/Haldon_Belvedere_Lawrence_Castel_In_Devon.png" data-img="3">
+          <img src="Images/New_website_photos/Gallery/Autumn_Long_Exposure.png" data-img="3">
+          <img src="Images/New_website_photos/Gallery/Bedruthan_Steps_In_Cornwall.png" data-img="3">
+          <img src="Images/New_website_photos/Gallery/Hill_In_Wales.png" data-img="3">
+        </div>
+      </div> 
+    </div>
 
     <div class="footer">
       <div class="top-secton">
@@ -107,7 +115,72 @@
 
     <script src="dark.js"></script>
     <script src="app.js"></script>
-    
+    <script>
+      
 
+
+// Get elements from DOM
+const btns = document.querySelectorAll('.sort-buttons button');
+const imgs = document.querySelectorAll('.images img');
+
+//Add a click even to all buttons
+
+for(let i = 1; i < btns.length; i++) {
+  btns[i].addEventListener('click', filterImg);
+}
+
+// Set active button on click
+function setActiveBtn(e) {
+  //Remove active class from all buttons
+  btns.forEach(btn => {
+    btn.classList.remove("btn-clicked");
+  });
+
+  //Add active class to clicked button
+  e.target.classList.add('btn-clicked');
+  
+}
+
+//filter images
+function filterImg(e) {
+  //Run the active button function
+  setActiveBtn(e);
+
+  //Loop through all images
+  imgs.forEach(img => {
+    //Expand all img's
+    img.classList.remove('img-shrink');
+    img.classList.add('img-expand');
+
+    //get data from data attribute
+    //Get image data type
+    const imgType = parseInt(img.dataset.img);
+    //get button data type
+     const btnType = parseInt(e.target.dataset.btn);
+
+     //if the image type and the type of button are not the same
+
+     if(imgType !== btnType) {
+       //Hide image
+       img.classList.remove('img-expand');
+       img.classList.add('img-shrink');
+     }
+  });
+}
+
+//Set event click for the 'All' button
+btns[0].addEventListener('click', (e) => {
+  //run the active button function 
+  setActiveBtn(e); 
+  //loop through all the img's
+  imgs.forEach(img => {
+    img.classList.remove('img-shrink');
+    img.classList.add('img-expand');
+  });
+});
+
+
+// for the rest of this -> https://www.youtube.com/watch?v=EAwlew1OLc8 Start at 3:50
+    </script>
   </body>
 </html>

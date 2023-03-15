@@ -1,0 +1,11 @@
+Next;
+sorting gallary by theme / landscape / lifestyle / city / animals / 
+gallary into clickable full screen
+
+barber js for nice image transitions 
+
+<body oncontextmenu="return false">
+
+<selection oncontextmenu="return false">Not Allowed</selection>
+
+// for the rest button sorting do  this -> https://www.youtube.com/watch?v=EAwlew1OLc8 Start at 3:50

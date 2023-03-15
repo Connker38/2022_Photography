@@ -10,7 +10,7 @@
   <body>
     <div id="whole-nav">
       <div id="myTopnav" class="Mysidenav">
-        <a href="index.html">Home</a>
+        <a class="active" href="index.html">Home</a>
         <a href="#">About</a> 
         <a href="gallary.html">Gallery</a>
         <a href="#">Projects</a>
@@ -100,76 +100,7 @@
       <script src="dark.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
-    <script>
-      gsap.to("#sky", {
-        scrollTrigger : {
-          scrub : 1
-        },
-        scale : 1.5
-      });
-
-      gsap.to("#wasdale", {
-        scrollTrigger : {
-          scrub : 1
-        },
-        scale : 1.5,
-        x : 400,
-        
-      });
-
-      gsap.to("#great-gable", {
-        scrollTrigger : {
-          scrub : 1
-        },
-        scale : 1.5,
-      });
-
-      gsap.to("#scafell", {
-        scrollTrigger : {
-          scrub : 1
-        },
-        scale : 1.5,
-        x : -400,
-      });
-
-      gsap.to("#water", {
-        scrollTrigger : {
-          scrub : 1
-        },
-        y : -800,
-      });
-
-      gsap.to("#lefty", {
-        scrollTrigger : {
-          scrub : 1
-        },
-        
-      });
-
-      gsap.to("#Kennal1", {
-        scrollTrigger : {
-          scrub : 1
-        },
-        scale : 1.5,
-      });
-
-      gsap.to("#Kennal2", {
-        scrollTrigger : {
-          scrub : 1
-        },
-        scale : 2.5,
-        
-      });
-
-      gsap.to("#Kennal3", {
-        scrollTrigger : {
-          scrub : 1
-        },
-        scale : 1.5,
-        y : -100,
-        
-      });
-    </script>
+    <script src="gsap.js"></script>
     <script src="app.js"></script>
     
   </body>
