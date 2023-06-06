@@ -114,16 +114,18 @@ span {
       visibility: hidden;
       z-index: 200;
       transition: all 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      
   }
   
   .navigation__list {
-      position: absolute;
+      position: relative;
       top: 50%;
       left: 50%;
       transform: translate(-55%, -55%);
       text-align: center;
       width: 100%;
       list-style: none;
+
             
   }
   
@@ -137,9 +139,9 @@ span {
       padding: 1rem 2rem;
       text-transform: uppercase;
       color: #f4f4f4;
-      font-size: 2.4rem;
+      font-size: 20px;
       text-decoration: none;
-      transition: all .2s;
+      transition: all .4s;
   }
   
   @media(min-width: 768px) {
@@ -174,12 +176,12 @@ span {
       position: relative;
       margin-top: 2.5rem;
       margin-left: 0.5rem;    
-      
   }
   
   .navigation__icon,
   .navigation__icon::before,
   .navigation__icon::after {
+      position: relative;
       display: inline-block;
       width: 2.2rem;
       height: 2px;
@@ -229,11 +231,7 @@ span {
   .sorting {
     display: flex;
     justify-content: center;
-  }
-
-  .sorting p {
-    right: 0;
-    padding-top: 0px;
+    padding-bottom: 30px;
   }
 
   .sort-buttons button {
@@ -241,8 +239,9 @@ span {
     cursor: pointer;
     background-color: #4a6a5f;
     border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+
+    border-radius: 10px;
+    box-shadow: 0 6px #999;
   }
 
   .sort-buttons button:hover, .sort-buttons .btn-clicked {
@@ -262,6 +261,7 @@ span {
 
   @media screen and (max-width: 400px) {
     
+
     .sorting button {
       width: 80px;
     }
@@ -270,9 +270,7 @@ span {
       justify-content: center;
     }
 
-    
   }
-
 
   #main {
     transition: margin-right .5s;
@@ -392,6 +390,9 @@ body {font-family: Verdana, sans-serif;}
 /* Responsive layout - makes a two column-layout instead of four columns */    
 @media screen and (min-width: 800px) {
       
+      .whole-nav{
+        
+      }
 
       .logo {
         display: flex;
@@ -471,6 +472,13 @@ body {font-family: Verdana, sans-serif;}
 
 @media screen and (min-width: 1100px) { 
 
+  .sort-buttons button {
+    width: 170px;
+    height: 70px;
+    font-size: 20px;
+  }
+
+  
   
 
       .navigation {

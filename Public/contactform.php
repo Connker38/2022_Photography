@@ -1,5 +1,5 @@
 <?php 
-/*
+/
 if (isset($_POST ['submit']) && $_POST['email'] != ''){
 
     $name = $_POST['name'];
@@ -11,7 +11,7 @@ if (isset($_POST ['submit']) && $_POST['email'] != ''){
     $txt = "You have reveived an email from ".$name".\n\n".$message;
 
     mail($mailTo, $message, $txt, $headers);
-    header("Location: index.php?mailsend");
+    header("Location: contactform.php?mailsend");
 
     $message_sent = true;
 }
